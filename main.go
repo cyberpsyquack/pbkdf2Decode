@@ -24,7 +24,7 @@ func findPassword(wordlist, targetHash string, salt []byte, iterations, derivedK
 	targetHashBytes, _ := hex.DecodeString(targetHash)
 	content, err := os.ReadFile(wordlist)
 	if err != nil {
-		fmt.Println("Errore nella lettura del file del dizionario:", err)
+		fmt.Println("Error while loading wordlist:", err)
 		return ""
 	}
 
@@ -45,12 +45,13 @@ func findPassword(wordlist, targetHash string, salt []byte, iterations, derivedK
 func main() {
 	pbkdf2DecodeLogo := f.NewFigure("pbkdf2Decode", "", true)
 	pbkdf2DecodeLogo.Print()
-	fmt.Printf("Release: %s\n Creator: %s\nBuild Time: %s\nBuild User: %s\n\n", b.Version, b.Creator, b.BuildTime, b.BuildUser)
+	fmt.Printf("\nVersion: %s\nCreator: %s\nBuild Time: %s\nBuild User: %s\n\n", b.Version, b.Creator, b.BuildTime, b.BuildUser)
 	salt := flag.String("s", "", "salt")
 	targetHash := flag.String("h", "", "hash")
 	wordlist := flag.String("w", "/usr/share/wordlists/rockyou.txt", "wordlist")
 	var usage = func() {
-		fmt.Println(flag.CommandLine.Output(), "-s Salt -h Hash -w Wordlist, default: /usr/share/wordlists/rockyou.txt")
+		fmt.Println("Help:")
+		flag.PrintDefaults()
 	}
 	flag.Parse()
 	if len(os.Args[1:]) == 0 {

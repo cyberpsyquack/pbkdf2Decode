@@ -23,7 +23,7 @@ If you want to build yourself `pbkdf2Decode` from source, please verify to have 
 Then run this command:
 
 ```bash
-go build -v -ldflags="-X 'github.com/CyberPsyQuack/pbkdf2Decode/build.Version=$(cat VERSION)' -X 'github.com/CyberPsyQuack/pbkdf2Decode/build.BuildUser=Your Name' -X 'github.com/CyberPsyQuack/pbkdf2Decode/build.BuildTime=$(date)'"
+go build -v -ldflags="-X 'github.com/cyberpsyquack/pbkdf2Decode/build.Version=$(cat VERSION)' -X 'github.com/cyberpsyquack/pbkdf2Decode/build.BuildUser=$(id -u -n)' -X 'github.com/cyberpsyquack/pbkdf2Decode/build.BuildTime=$(date)'"
 ```
 
 ## Manual Installation
