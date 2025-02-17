@@ -6,7 +6,7 @@
  [![OS - MacOS](https://img.shields.io/badge/OS-macOS-blue?logo=Apple&logoColor=white)](https://apple.com/ "Go to Apple homepage")
  [![contributions - welcome](https://img.shields.io/badge/contributions-welcome-blue)](/CONTRIBUTING.md "Go to contributions doc")
 
-
+**pbkdf2Decode** - A command-line utility to decode PBKDF2 hashes by brute-forcing with a dictionary attack.
 
 ## Roadmap:
 
@@ -15,6 +15,8 @@
 - [ ] RPM package
 - [ ] MacOS PKG
 - [ ] FreeBSD PKG
+- [ ] Logging verbosity
+- [ ] Multi-thread
 
 ## Building from source
 
